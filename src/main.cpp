@@ -47,7 +47,10 @@ void setup()
 void loop()
 {
   server_on(); // 等待用户端响应
+  local_time = get_time_for_internet();
+  display_time(local_time);
 
+  //检测按键是否被按下
   if (!digitalRead(resetPin)) // 长按5秒(P0)清除网络配置信息
   {
     delay(5000); // 哈哈哈哈，这样不准确
@@ -59,7 +62,4 @@ void loop()
       Serial.println("已重启设备."); // 有机会读到这里吗？
     }
   }
-
-  local_time = get_time_for_internet();
-  display_time(local_time);
 }

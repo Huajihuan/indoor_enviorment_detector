@@ -129,9 +129,9 @@ void handle_config_wifi() // 处理配置WiFi请求
     // 用户输入成功,开始连接WiFi
     server.send(200, "text/html", "<meta charset='UTF-8'>SSID: " + wifi_ssid + "<br />password:" + wifi_pass + "<br />已取得WiFi信息,正在尝试连接,请手动关闭此页面。"); // 返回保存成功页面
     // delay(2000);
-    WiFi.softAPdisconnect(true); // 参数设置为true，设备将直接关闭接入点模式，即关闭设备所建立的WiFi网络。
-    server.close();              // 关闭web服务
-    WiFi.softAPdisconnect();     // 在不输入参数的情况下调用该函数,将关闭接入点模式,并将当前配置的AP热点网络名和密码设置为空值.
+    // WiFi.softAPdisconnect(true); // 参数设置为true，设备将直接关闭接入点模式，即关闭设备所建立的WiFi网络。
+    // server.close();              // 关闭web服务
+    // WiFi.softAPdisconnect();     // 在不输入参数的情况下调用该函数,将关闭接入点模式,并将当前配置的AP热点网络名和密码设置为空值.
     Serial.println("WiFi Connect SSID:" + wifi_ssid + "  PASS: " + wifi_pass);
     connect_to_wifi(wifi_ssid, wifi_pass, 30000);
 }

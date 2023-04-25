@@ -46,7 +46,7 @@ void display_time(struct tm local_time) // 显示时间
     else
     {
         lcd_print(local_time.tm_mon + 1, 5, 0);
-        lcd_print("", 6, 0);
+        lcd_print(" ", 6, 0);
     }
 
     if(local_time.tm_mday >= 10)
@@ -56,7 +56,7 @@ void display_time(struct tm local_time) // 显示时间
     else
     {
         lcd_print(local_time.tm_mday, 8, 0);
-        lcd_print("", 9, 0);
+        lcd_print(" ", 9, 0);
     }
 
     if(local_time.tm_hour >= 10)
@@ -66,7 +66,7 @@ void display_time(struct tm local_time) // 显示时间
     else
     {
         lcd_print(local_time.tm_hour, 11, 0);
-        lcd_print("", 12, 0);
+        lcd_print(" ", 12, 0);
     }
     lcd_print(":", 13, 0);
 
@@ -77,7 +77,7 @@ void display_time(struct tm local_time) // 显示时间
     else
     {
         lcd_print(local_time.tm_min, 14, 0);
-        lcd_print("", 15, 0);
+        lcd_print(" ", 15, 0);
     }
 
     if(local_time.tm_sec >= 10)
@@ -87,7 +87,7 @@ void display_time(struct tm local_time) // 显示时间
     else
     {
         lcd_print(local_time.tm_sec, 0, 1);
-        lcd_print("", 1, 1);
+        lcd_print(" ", 1, 1);
     }
 }
 
